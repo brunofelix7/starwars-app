@@ -1,0 +1,28 @@
+<nav id="dash_menu">
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a routerLink="" [class.activated]="currentUrl == '/'">
+        <span style="margin-left: 15px;">Home</span>
+      </a>
+    </li>
+  </ul>
+  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted"></h6>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a routerLink="personagens" [class.activated]="currentUrl == '/personagens'">
+        <span style="margin-left: 15px;">Personagens</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="planetas" [class.activated]="currentUrl == '/planetas'">
+        <span style="margin-left: 15px;">Planetas</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="naves" [class.activated]="currentUrl == '/naves'">
+        <span style="margin-left: 15px;">Naves</span>
+      </a>
+    </li>
+  </ul>
+  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted"></h6>
+</nav>

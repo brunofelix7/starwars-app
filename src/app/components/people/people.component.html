@@ -1,0 +1,42 @@
+<h1>Personagens</h1>
+<hr/>
+<div class="row">
+  <div class="card" style="width:300px" *ngFor="let people of response.results">
+    <div *ngIf="people.name == 'Luke Skywalker'">
+      <img class="card-img-top" src="/assets/images/img_luke.jpeg" alt="Card image">
+    </div>
+    <div *ngIf="people.name == 'C-3PO'">
+      <img class="card-img-top" src="/assets/images/img_c-3po.jpeg" alt="Card image">
+    </div>
+    <div *ngIf="people.name == 'R2-D2'">
+      <img class="card-img-top" src="/assets/images/img_r2-d2.jpeg" alt="Card image">
+    </div>
+    <div *ngIf="people.name == 'Darth Vader'">
+      <img class="card-img-top" src="/assets/images/img_darth-vader.jpeg" alt="Card image">
+    </div>
+    <div *ngIf="people.name == 'Leia Organa'">
+      <img class="card-img-top" src="/assets/images/img_leia-organa.jpeg" alt="Card image">
+    </div>
+    <div *ngIf="people.name == 'Owen Lars'">
+      <img class="card-img-top" src="/assets/images/img_owen-lars.jpeg" alt="Card image">
+    </div>
+    <div *ngIf="people.name == 'Beru Whitesun lars'">
+      <img class="card-img-top" src="/assets/images/img_beru-lars.jpeg" alt="Card image">
+    </div>
+    <div *ngIf="people.name == 'R5-D4'">
+      <img class="card-img-top" src="/assets/images/img_r5-d4.jpeg" alt="Card image">
+    </div>
+    <div *ngIf="people.name == 'Biggs Darklighter'">
+      <img class="card-img-top" src="/assets/images/img_biggs.jpeg" alt="Card image">
+    </div>
+    <div *ngIf="people.name == 'Obi-Wan Kenobi'">
+      <img class="card-img-top" src="/assets/images/img_obi-wan-kenobi.jpeg" alt="Card image">
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">{{ people.name }}</h4>
+      <button type="button" (click)="getUrl( people.url )" class="btn btn-dark btn-block">
+        <span class="align-middle">Visualizar perfil</span>
+      </button>
+    </div>
+  </div>
+</div>
