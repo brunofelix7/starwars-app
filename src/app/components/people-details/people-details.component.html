@@ -1,24 +1,110 @@
 <h1>{{ people.name }}</h1>
 <hr/>
 
-<div class="card" style="width: 400px;">
-  <div *ngIf="people.name == 'Obi-Wan Kenobi'">
-    <img class="card-img-top" src="/assets/images/details_obi-wan-kenobi.jpeg" alt="Card image">
+<div class="row">
+  <div class="col-6">
+    <!-- Informações pessoais -->
+    <div class="card" style="width: 400px;">
+      <div *ngIf="people.name == 'Luke Skywalker'">
+        <img class="card-img-top" src="/assets/images/img_luke.jpeg" alt="Card image">
+      </div>
+      <div *ngIf="people.name == 'C-3PO'">
+        <img class="card-img-top" src="/assets/images/img_c-3po.jpeg" alt="Card image">
+      </div>
+      <div *ngIf="people.name == 'R2-D2'">
+        <img class="card-img-top" src="/assets/images/img_r2-d2.jpeg" alt="Card image">
+      </div>
+      <div *ngIf="people.name == 'Darth Vader'">
+        <img class="card-img-top" src="/assets/images/img_darth-vader.jpeg" alt="Card image">
+      </div>
+      <div *ngIf="people.name == 'Leia Organa'">
+        <img class="card-img-top" src="/assets/images/img_leia-organa.jpeg" alt="Card image">
+      </div>
+      <div *ngIf="people.name == 'Owen Lars'">
+        <img class="card-img-top" src="/assets/images/img_owen-lars.jpeg" alt="Card image">
+      </div>
+      <div *ngIf="people.name == 'Beru Whitesun lars'">
+        <img class="card-img-top" src="/assets/images/img_beru-lars.jpeg" alt="Card image">
+      </div>
+      <div *ngIf="people.name == 'R5-D4'">
+        <img class="card-img-top" src="/assets/images/img_r5-d4.jpeg" alt="Card image">
+      </div>
+      <div *ngIf="people.name == 'Biggs Darklighter'">
+        <img class="card-img-top" src="/assets/images/img_biggs.jpeg" alt="Card image">
+      </div>
+      <div *ngIf="people.name == 'Obi-Wan Kenobi'">
+        <img class="card-img-top" src="/assets/images/details_obi-wan-kenobi.jpeg" alt="Card image">
+      </div>
+      <div class="card-body">
+        <h5>Informações pessoas</h5>
+        <hr/>
+        <table id="dados-pessoais">
+          <tr>
+            <th><span>Cabelo:</span></th>
+            <td><span>{{ people.hair_color | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Pele:</span></th>
+            <td><span>{{ people.skin_color | titlecase }}</span></td>
+          </tr> 
+          <tr>
+            <th><span>Olhos:</span></th>
+            <td><span>{{ people.eye_color | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Nascimento:</span></th>
+            <td><span>{{ people.birth_year | uppercase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Gênero:</span></th>
+            <td><span>{{ people.gender | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Planeta natal:</span></th>
+            <td><span>{{ planet.name }}</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </div>
-  <div id="empty">
-    <img class="card-img-top" src="/assets/images/img_empty.png" alt="Card image">
-  </div>
-  <div class="card-body">
-    <table>
-      <tr>
-        <th>Cor do cabelo: </th>
-        <td>{{ people.hair_color }}</td>
-      </tr>
-      <tr>
-        <th>Cor da pele: </th>
-        <td>{{ people.skin_color }}</td>
-      </tr> 
-    </table>
+
+  <!-- Filmes -->
+  <!-- Informações pessoais -->
+  <div class="col-6">
+    <div class="card" style="width: 400px;">
+      <div class="card-body">
+        <h5>Filmes</h5>
+        <hr/>
+        <table id="filmes">
+          <tr *ngFor="let film of films">
+            <td><span>{{ film.title }}</span></td>
+          </tr>
+        </table>
+        <br/>
+        <h5>Espécies</h5>
+        <hr/>
+        <table id="especies">
+          <tr *ngFor="let specie of species">
+            <td><span>{{ specie.name }}</span></td>
+          </tr>
+        </table>
+        <br/>
+        <h5>Veículos</h5>
+        <hr/>
+        <table id="veiculos">
+          <tr *ngFor="let vehicle of vehicles">
+            <td><span>{{ vehicle.name }}</span></td>
+          </tr>
+        </table>
+        <br/>
+        <h5>Naves</h5>
+        <hr/>
+        <table id="veiculos">
+          <tr *ngFor="let starship of starships">
+            <td><span>{{ starship.name }}</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
-

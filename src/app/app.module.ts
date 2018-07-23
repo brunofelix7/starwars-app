@@ -10,11 +10,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PeopleComponent } from './components/people/people.component';
+import { PeopleDetailsComponent } from './components/people-details/people-details.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 /**Service */
 import { PeopleService } from './services/people.service';
-import { PeopleDetailsComponent } from './components/people-details/people-details.component';
+import { FilmService } from './services/film.service';
+import { PlanetService } from './services/planet.service';
+import { SpecieService } from './services/specie.service';
+import { VehicleService } from './services/vehicle.service';
+import { StarshipService } from './services/starship.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,14 @@ import { PeopleDetailsComponent } from './components/people-details/people-detai
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [PeopleService],
+  providers: [
+    PeopleService, 
+    FilmService, 
+    PlanetService, 
+    SpecieService,
+    VehicleService,
+    StarshipService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

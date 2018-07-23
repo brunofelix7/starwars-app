@@ -1,5 +1,3 @@
-import { People } from "./people";
-
 export class ServerResponse {
 
     public count: number;

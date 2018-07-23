@@ -16,12 +16,12 @@ export class PeopleService {
 
   /**Retorna todas as pessoas */
   public getAll(): Observable<ServerResponse>{
-    return this.http.get<ServerResponse>(Route.URI_PEOPLE);
+    return this.http.get<ServerResponse>(Route.URI_PEOPLES);
   }
 
   /**Retorna uma pessoa */
   public getOne(id: string): Observable<People>{
-    return this.http.get<People>(Route.URI_PEOPLE + 0 + id);
+    return this.http.get<People>(Route.URI_PEOPLES + 0 + id);
   }
 
 }
