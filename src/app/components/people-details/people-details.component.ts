@@ -38,6 +38,8 @@ export class PeopleDetailsComponent implements OnInit {
               private starshipService: StarshipService,
               private router: ActivatedRoute) {
     this.id = this.router.snapshot.params['id'];
+    this.people = new People();
+    this.planet = new Planet();
     this.films = new Array<Film>();
     this.species = new Array<Specie>();
     this.vehicles = new Array<Vehicle>();
@@ -62,7 +64,6 @@ export class PeopleDetailsComponent implements OnInit {
         this.getVehicle(this.people.vehicles);
         this.getStarship(this.people.starships);
     });
-    
   }
 
   private getFilms(urls: string[]): void{

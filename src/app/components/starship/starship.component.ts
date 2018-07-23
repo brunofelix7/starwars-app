@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { PeopleService } from '../../services/people.service';
 import { ServerResponse } from '../../classes/server-response';
-import { Subscription } from 'rxjs';
+import { Subscription } from '../../../../node_modules/rxjs';
+import { StarshipService } from '../../services/starship.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-people',
-  templateUrl: './people.component.html',
-  styleUrls: ['./people.component.scss']
+  selector: 'app-starship',
+  templateUrl: './starship.component.html',
+  styleUrls: ['./starship.component.scss']
 })
-export class PeopleComponent implements OnInit {
+export class StarshipComponent implements OnInit {
 
   public response: ServerResponse;
   public subscribe: Subscription;
   public loading: string;
   public id: string;
 
-  constructor(private service: PeopleService, private route: Router) { 
-    this.loading = 'Carregando...';
+  constructor(private starshipService: StarshipService, private route: Router) { 
+
   }
 
   ngOnInit() {
@@ -29,7 +29,7 @@ export class PeopleComponent implements OnInit {
   }
 
   private findAll(): void{
-    this.subscribe = this.service.getAll().subscribe(
+    this.subscribe = this.starshipService.getAll().subscribe(
       data => {
         this.response = data
       }
@@ -38,7 +38,7 @@ export class PeopleComponent implements OnInit {
 
   public getUrl(url: string): void{
     this.id = url.replace(/\D/g,'');
-    this.route.navigate([`personagens/${this.id}`])
+    this.route.navigate([`naves/${this.id}`])
   }
 
 }

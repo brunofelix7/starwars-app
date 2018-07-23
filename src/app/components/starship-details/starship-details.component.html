@@ -1,0 +1,87 @@
+<h1>{{ starship.name }}</h1>
+<hr/>
+
+<div class="row">
+  <div class="col-6">
+    <div class="card" style="width: 400px;">
+      <div>
+        <img class="card-img-top" src="/assets/images/empty.png" alt="Card image">
+      </div>
+      <div class="card-body">
+        <h5>Informações</h5>
+        <hr/>
+        <table id="info">
+          <tr>
+            <th><span>Modelo:</span></th>
+            <td><span>{{ starship.model | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Fabricante:</span></th>
+            <td><span>{{ starship.manufacturer | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Preço:</span></th>
+            <td><span>{{ starship.cost_in_credits | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Tamanho:</span></th>
+            <td><span>{{ starship.length | titlecase }}</span></td>
+          </tr> 
+          <tr>
+            <th><span>Velocidade:</span></th>
+            <td><span>{{ starship.max_atmosphering_speed | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Técnicos:</span></th>
+            <td><span>{{ starship.crew | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Passageiros:</span></th>
+            <td><span>{{ starship.passengers | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Capacidade:</span></th>
+            <td><span>{{ starship.cargo_capacity }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Consumíveis:</span></th>
+            <td><span>{{ starship.consumables }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Hyperdrive:</span></th>
+            <td><span>{{ starship.hyperdrive_rating }}</span></td>
+          </tr>
+          <tr>
+            <th><span>MGLT:</span></th>
+            <td><span>{{ starship.MGLT }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Classe:</span></th>
+            <td><span>{{ starship.starship_class }}</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card" style="width: 400px;">
+      <div class="card-body">
+        <h5>Pilotos</h5>
+        <hr/>
+        <table id="habitantes">
+          <tr *ngFor="let people of peoples">
+            <td><span>{{ people.name }}</span></td>
+          </tr>
+        </table>
+        <br/>
+        <h5>Filmes</h5>
+        <hr/>
+        <table id="films">
+          <tr *ngFor="let film of films">
+            <td><span>{{ film.title }}</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

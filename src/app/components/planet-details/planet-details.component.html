@@ -1,0 +1,71 @@
+<h1>{{ planet.name }}</h1>
+<hr/>
+
+<div class="row">
+  <div class="col-6">
+    <div class="card" style="width: 400px;">
+      <div>
+        <img class="card-img-top" src="/assets/images/empty.png" alt="Card image">
+      </div>
+      <div class="card-body">
+        <h5>Informações</h5>
+        <hr/>
+        <table id="info">
+          <tr>
+            <th><span>Rotação:</span></th>
+            <td><span>{{ planet.rotation_period | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Órbita:</span></th>
+            <td><span>{{ planet.orbital_period | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Diâmetro:</span></th>
+            <td><span>{{ planet.diameter | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Clima:</span></th>
+            <td><span>{{ planet.climate | titlecase }}</span></td>
+          </tr> 
+          <tr>
+            <th><span>Gravidade:</span></th>
+            <td><span>{{ planet.gravity | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Terreno:</span></th>
+            <td><span>{{ planet.terrain | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>Água:</span></th>
+            <td><span>{{ planet.surface_water | titlecase }}</span></td>
+          </tr>
+          <tr>
+            <th><span>População:</span></th>
+            <td><span>{{ planet.population }}</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card" style="width: 400px;">
+      <div class="card-body">
+        <h5>Habitantes</h5>
+        <hr/>
+        <table id="habitantes">
+          <tr *ngFor="let people of peoples">
+            <td><span>{{ people.name }}</span></td>
+          </tr>
+        </table>
+        <br/>
+        <h5>Filmes</h5>
+        <hr/>
+        <table id="films">
+          <tr *ngFor="let film of films">
+            <td><span>{{ film.title }}</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

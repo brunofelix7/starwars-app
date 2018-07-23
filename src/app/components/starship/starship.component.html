@@ -1,0 +1,15 @@
+<h1>Naves</h1>
+<hr/>
+<div class="row">
+  <div class="card" style="width:300px" *ngFor="let starship of response.results">
+    <div>
+      <img class="card-img-top" src="/assets/images/empty.png" alt="Card image">
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">{{ starship.name }}</h4>
+      <button type="button" (click)="getUrl( starship.url )" class="btn btn-dark btn-block">
+        <span class="align-middle">Visualizar</span>
+      </button>
+    </div>
+  </div>
+</div>
