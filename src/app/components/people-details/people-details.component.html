@@ -1,3 +1,24 @@
-<p>
-  Nome: {{ people.name }}
-</p>
+<h1>{{ people.name }}</h1>
+<hr/>
+
+<div class="card" style="width: 400px;">
+  <div *ngIf="people.name == 'Obi-Wan Kenobi'">
+    <img class="card-img-top" src="/assets/images/details_obi-wan-kenobi.jpeg" alt="Card image">
+  </div>
+  <div id="empty">
+    <img class="card-img-top" src="/assets/images/img_empty.png" alt="Card image">
+  </div>
+  <div class="card-body">
+    <table>
+      <tr>
+        <th>Cor do cabelo: </th>
+        <td>{{ people.hair_color }}</td>
+      </tr>
+      <tr>
+        <th>Cor da pele: </th>
+        <td>{{ people.skin_color }}</td>
+      </tr> 
+    </table>
+  </div>
+</div>
+
