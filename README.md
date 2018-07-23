@@ -12,6 +12,9 @@
 ### https://valor-software.com/ngx-bootstrap/
 ### https://getbootstrap.com/
 ### https://www.starwars.com/databank
+### https://medium.com/@hellotunmbi/how-to-deploy-angular-application-to-heroku-1d56e09c5147
+### https://github.com/typicode/husky/issues/124
 
 ## Template
 ### https://github.com/akveo/ngx-admin
+
